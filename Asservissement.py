@@ -40,23 +40,23 @@ print("Ready")
 
 def GetSpeed(Sensor,Timeout=0.2) :
 	currentTime = time()
-	if rightSensor.is_pressed :
-		while rightSensor.is_pressed and time() - currentTime < Timeout :
+	if Sensor.is_pressed :
+		while Sensor.is_pressed and time() - currentTime < Timeout :
 			0
 		startTime = time()
-		while not rightSensor.is_pressed and time() - currentTime < Timeout :
+		while not Sensor.is_pressed and time() - currentTime < Timeout :
 			0
-		while rightSensor.is_pressed and time() - currentTime < Timeout :
+		while Sensor.is_pressed and time() - currentTime < Timeout :
 			0
 		endTime = time()	
 	
 	else :
-		while not rightSensor.is_pressed and time() - currentTime < Timeout :
+		while not Sensor.is_pressed and time() - currentTime < Timeout :
 			0
 		startTime = time()
-		while rightSensor.is_pressed and time() - currentTime < Timeout :
+		while Sensor.is_pressed and time() - currentTime < Timeout :
 			0
-		while not rightSensor.is_pressed and time() - currentTime < Timeout :
+		while not Sensor.is_pressed and time() - currentTime < Timeout :
 			0
 		endTime = time()
 	if time() - currentTime < Timeout :
